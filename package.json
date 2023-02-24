@@ -1,0 +1,26 @@
+{
+  "name": "log-collector",
+  "version": "1.0.0",
+  "description": "前端日志采集",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "serve": "webpack serve --open",
+    "start": "npm run serve",
+    "test": "npm run serve",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-cookie": "^3.0.1",
+    "nanoid": "^4.0.0"
+  },
+  "devDependencies": {
+    "axios": "^0.27.2",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.9.2"
+  }
+}

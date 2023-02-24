@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>log-collector</title>
+  <style>
+    .table{
+      width: 100%;
+      border-spacing: 0;
+      margin-top: 10px;
+    }
+    .table td{
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <section data-bktd="container1">
+    <h2>多层容器</h2>
+    <div>
+      <div data-bktd="container3">
+        <button data-bktt="click" data-bktd="测试点击行为" onclick="alert(3)">测试点击行为</button>
+      </div>
+    </div>
+  </section>
+  <hr/>
+  <section>
+    <h2>按钮点击事件</h2>
+    <button data-bktt="click" data-bktd="测试点击行为">测试点击行为</button>
+    <button data-bktt="mousedown">测试mousedown行为</button>
+    <button data-bktt="mouseover">测试鼠标经过行为</button>
+    <button data-bktt="dblclick">测试双击行为</button>
+    <button data-bktt="contextmenu">测试鼠标右键行为</button>
+    <br/>
+    <table data-bktd="列表1" class="table">
+      <tr data-bkti="1">
+        <td><button data-bktt="click" data-bktd="测试点击行为">测试点击行为</button></td>
+      </tr>
+    </table>
+  </section>
+  <hr/>
+  <section>
+    <h2>输入</h2>
+    <input type="text" data-bktt="change" data-bktd="用户名输入框"/>
+    <br/>
+    <select data-bktt="change" data-bktd="选择性别">
+      <option value ="0">男</option>
+      <option value ="1">女</option>
+    </select>
+    <br/>
+    <input data-bktt="change" data-bktd="苹果" name="Fruit" type="radio" value="" />苹果</label>
+    <br/>
+    <label data-bktt="change" data-bktd="看书"><input name="Fruit" type="checkbox" value="" />看书</label>
+    <label data-bktt="change" data-bktd="写字"><input name="Fruit" type="checkbox" value="" />写字</label>
+    <br/>
+    <textarea rows="10" cols="30" data-bktt="change" data-bktd="多行文本框">
+      一个多行文本框。
+    </textarea>
+  </section>
+  <hr/>
+  <section>
+    <h2>loading</h2>
+    <button id="requestBtn" data-bktt="click">测试request行为</button>
+  </section>
+  <!-- click | mouseover... 更多事件类型详见：https://www.w3.org/TR/2022/WD-uievents-20220629/#event-types-list -->
+  <script src="/log/bundle.js"></script>
+</body>
+
+</html>
